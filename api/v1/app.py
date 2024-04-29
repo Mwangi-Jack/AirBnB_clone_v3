@@ -7,11 +7,11 @@ a Blueprint which will be used to define routes
 
 from os import getenv
 from flask import Flask, jsonify, make_response
+from models import storage
+from api.v1.views import app_views
 
 app = Flask(__name__)
 
-from models import storage
-from api.v1.views import app_views
 
 app.register_blueprint(app_views)
 
